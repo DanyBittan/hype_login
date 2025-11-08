@@ -8,6 +8,7 @@ session_set_cookie_params([
 // Start session if not already started
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
+    session_regenerate_id(true);
 }
 
 // Clean and validate user input

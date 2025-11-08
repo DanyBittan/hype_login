@@ -1,3 +1,2 @@
 #  Ignore configuration and database connection files
-include/config.php
-include/db_connection.php
+includes/config.php
