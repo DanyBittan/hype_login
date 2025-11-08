@@ -52,6 +52,7 @@ function userExists($conn, $username, $email)
     return false;
 }
 
+// CSRF token generation and validation 
 function generateCsrfToken()
 {
     if (empty($_SESSION['csrf_token'])) {

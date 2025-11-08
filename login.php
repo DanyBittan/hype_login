@@ -1,5 +1,4 @@
 <?php
-header("Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'self'; font-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';");
 require_once 'includes/db_connection.php';
 require_once 'includes/functions.php';
 
