@@ -1,56 +1,178 @@
+/* Importando fuente moderna de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 * {
-    color: black;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --primary-color: #2563eb;
+    --primary-dark: #1d4ed8;
+    --secondary-color: #64748b;
+    --background: #f8fafc;
+    --white: #ffffff;
+    --error-bg: #fecaca;
+    --error-border: #dc2626;
 }
 
 body {
-    background-color: rgb(179, 179, 179);
-    height: 100vh;
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 2rem;
+    color: #1e293b;
 }
 
 .signup-form,
 .login-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-    width: 200px;
-    margin: auto;
-    border: 3px solid white;
-    padding: 10px;
-    border-radius: 10px;
-    background-color: rgb(182, 182, 182);
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    transition: transform 0.3s ease;
 }
 
 input {
-    padding: 4px;
-    border-radius: 5px;
-    border: 1px solid gray;
     width: 100%;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+button {
+    width: 100%;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 1rem;
+}
+
+button:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-1px);
 }
 
 .error-card {
-    border: 2px solid darkred;
-    background-color: lightcoral;
-    padding: 12px;
-    margin: auto;
+    background-color: var(--error-bg);
+    border: 1px solid var(--error-border);
+    color: var(--error-border);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
     text-align: center;
-    border-radius: 10px;
+    font-size: 0.875rem;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 1rem;
 }
 
 table {
-    border: black 1px solid;
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
+    background: var(--white);
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 800px;
+    margin: 2rem 0;
+    overflow: hidden;
+}
+
+th {
+    background-color: #f8fafc;
+    color: var(--secondary-color);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
 }
 
 th,
 td {
-    border: black 1px solid;
-    padding: 10px;
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:hover {
+    background-color: #f8fafc;
+}
+
+/* Enlaces */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+/* Contenedores */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Títulos */
+h1,
+h2,
+h3 {
+    color: #1e293b;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+
+    .signup-form,
+    .login-form,
+    .error-card {
+        width: 90%;
+    }
+
+    table {
+        font-size: 0.875rem;
+    }
+
+    th,
+    td {
+        padding: 0.75rem;
+    }
 }

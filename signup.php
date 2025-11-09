@@ -71,10 +71,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <label for="password_verification">Repeat the password:</label>
         <input type="password" name="password_verification" placeholder="Repeat the password" required>
         <button type="submit">Sign Up</button>
-        <a href="login.php">Already have an account? Log in here.</a>
         <?php if (isset($_GET['errors'])) {
             echo '<div class="error-card">' . htmlspecialchars($_GET['errors'], ENT_QUOTES, 'UTF-8') . '</div>';
         } ?>
+        <a href="login.php">Already have an account? Log in here.</a>
     </form>
 
 </body>
