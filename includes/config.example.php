@@ -1,5 +1,7 @@
 <?php
 
+error_reporting(E_ALL);
+ini_set('display_errors', 0);
 // Database configuration
 define('DB_HOST', 'localhost');
 define('DB_NAME', 'database_name');

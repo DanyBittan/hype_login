@@ -5,4 +5,3 @@ $usersData = $dbConnection->query("SELECT * FROM users");
 if ($dbConnection->connect_error) {
     die("Connection failed: " . $dbConnection->connect_error);
 }
-print_r($usersData);

@@ -2,10 +2,9 @@
 require_once 'includes/db_connection.php';
 require_once 'includes/functions.php';
 
-$username = $_POST['username'];
-$password = $_POST['password'];
-
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
     // CSRF token validation
     if (!validateCsrfToken($_POST['csrf_token'])) {
         die('Invalid CSRF token');
